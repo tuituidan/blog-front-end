@@ -173,9 +173,9 @@ nav .logo-text{
 /* region banner */
 .fullpage-wrapper {
     width: 100%;
-    height: 45vh;
+    height: 50vh;
     background: radial-gradient(#353c44, #37474f);
-    display: flex;
+    padding-top: 20px;
 }
 .reactor-container {
     width: 300px;
@@ -279,6 +279,18 @@ nav .logo-text{
     to {
         transform: rotate(360deg);
     }
+}
+.header-desc{
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    color: white;
+    margin-top: 33px;
+    transition: all 0.5s;
+    font-weight: 700;
+}
+.header-desc:hover{
+    letter-spacing: 5px;
 }
 
 /* endregion */
