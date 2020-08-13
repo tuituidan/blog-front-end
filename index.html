@@ -1,109 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>推推蛋的个人博客</title>
-  <!-- CSS  -->
-  <link rel="stylesheet" href="css/materialize-font.css">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>推推蛋的个人博客</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/materialize-font.css">
+    <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
 <div class="navbar-fixed">
-  <nav class="blue-grey darken-3" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
-      <svg class="logo-text">
-        <text x="0" y="70%">推推蛋</text>
-      </svg>
-    </a>
-      <ul class="right hide-on-med-and-down">
+    <nav class="blue-grey darken-3" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+            <svg class="logo-text">
+                <text x="0" y="70%">推推蛋</text>
+            </svg>
+        </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">标签</a></li>
+                <li><a href="#">分类</a></li>
+                <li><a href="#">归档</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#">友情链接</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+        <ul class="right">
+            <li><a href="https://github.com/tuituidan" class="github-corner" target="_blank" title="Follow me on GitHub"
+                   aria-label="Follow me on GitHub">
+                <svg width="62" height="62" viewBox="0 0 250 250" class="github-svg" aria-hidden="true">
+                    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+                    <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+                          fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+                    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+                          fill="currentColor" class="octo-body"></path>
+                </svg>
+            </a></li>
+        </ul>
+    </nav>
+</div>
+<div class="side-nav-start">
+    <ul id="nav-mobile" class="side-nav">
         <li><a href="#">首页</a></li>
         <li><a href="#">标签</a></li>
         <li><a href="#">分类</a></li>
         <li><a href="#">归档</a></li>
         <li><a href="#">关于</a></li>
         <li><a href="#">友情链接</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-    <ul class="right">
-      <li><a href="https://github.com/tuituidan" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub">
-        <svg width="62" height="62" viewBox="0 0 250 250" class="github-svg" aria-hidden="true">
-          <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-          <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
-        </svg>
-      </a></li>
     </ul>
-  </nav>
 </div>
-  <div class="side-nav-start">
-    <ul id="nav-mobile" class="side-nav">
-      <li><a href="#">首页</a></li>
-      <li><a href="#">标签</a></li>
-      <li><a href="#">分类</a></li>
-      <li><a href="#">归档</a></li>
-      <li><a href="#">关于</a></li>
-      <li><a href="#">友情链接</a></li>
-    </ul>
-  </div>
 <div class="fullpage-wrapper">
-  <div class="reactor-container">
-    <div class="reactor-container-inner circle abs-center"></div>
-    <div class="tunnel circle abs-center"></div>
-    <div class="core-wrapper circle abs-center"></div>
-    <div class="core-outer circle abs-center">
-      <img src="images/head-cat.jpg" style="width: 100%;height: 100%;border-radius: 50%;" alt="head" />
+    <div class="reactor-container">
+        <div class="reactor-container-inner circle abs-center"></div>
+        <div class="tunnel circle abs-center"></div>
+        <div class="core-wrapper circle abs-center"></div>
+        <div class="core-outer circle abs-center">
+            <img class="circle responsive-img" src="images/head-cat.jpg" alt="head"/>
+        </div>
+        <div class="coil-container">
+            <div class="coil coil-1"></div>
+            <div class="coil coil-2"></div>
+            <div class="coil coil-3"></div>
+            <div class="coil coil-4"></div>
+            <div class="coil coil-5"></div>
+            <div class="coil coil-6"></div>
+            <div class="coil coil-7"></div>
+            <div class="coil coil-8"></div>
+        </div>
     </div>
-    <div class="coil-container">
-      <div class="coil coil-1"></div>
-      <div class="coil coil-2"></div>
-      <div class="coil coil-3"></div>
-      <div class="coil coil-4"></div>
-      <div class="coil coil-5"></div>
-      <div class="coil coil-6"></div>
-      <div class="coil coil-7"></div>
-      <div class="coil coil-8"></div>
-    </div>
-  </div>
-  <div class="header-desc">
-    talk is cheap，show me the code
-  </div>
 </div>
 
 
-  <div class="container">
+<div class="container">
     <div class="section">
+        <!--   Icon Section   -->
+        <div class="row card-row">
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">快速开发</h5>
-
-            <p class="light">我们做最繁重的工作为你提供一个默认的风格，把我们的自定义组件。此外，我们精致的动画和转换，为开发人员提供一个更流畅的体验。</p>
-          </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">用户体验</h5>
-
-            <p class="light">通过利用元素和素材设计的原则，我们创建一个框架，采用组件和动画，提供更多的方便给用户。此外，一个单一的底层响应系统在所有平台上允许一个更统一的用户体验。</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">简单使用</h5>
-
-            <p class="light">我们已经提供了详细的文档，以及特定的代码示例，以帮助新用户开始使用。我们也总是开放的反馈，并可以回答任何问题，用户可能有关于实现。</p>
-          </div>
-        </div>
-      </div>
 
     </div>
     <br><br>
@@ -111,49 +86,41 @@
     <div class="section">
 
     </div>
-  </div>
+</div>
 
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">我们的团队</h5>
-          <p class="grey-text text-lighten-4">我们是一个在这个项目上工作的大学生团队，就像是我们的全职工作。任何金额将有助于支持和继续在这个项目上的发展，并不胜感激。</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">设置</h5>
-          <ul>
-            <li><a class="white-text" href="#!">链接 1</a></li>
-            <li><a class="white-text" href="#!">链接 2</a></li>
-            <li><a class="white-text" href="#!">链接 3</a></li>
-            <li><a class="white-text" href="#!">链接 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">链接</h5>
-          <ul>
-            <li><a class="white-text" href="#!">链接 1</a></li>
-            <li><a class="white-text" href="#!">链接 2</a></li>
-            <li><a class="white-text" href="#!">链接 3</a></li>
-            <li><a class="white-text" href="#!">链接 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<footer class="page-footer orange">
     <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
     </div>
-  </footer>
+</footer>
 
 
-  <!--  Scripts-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
+<!--  Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/template.js"></script>
+<script src="js/index.js"></script>
+<script type="text/html" id="itemHtml">
+    <div class="col m3">
+        <div class="card small hoverable">
+            <div class="card-image">
+                <img class="materialboxed" data-caption="图片名称{{index}}" src="images/{{index}}.jpg">
+                <span class="card-title">图片图片名称图片名称图片名称图片名称图片名称名称{{index}}</span>
+            </div>
+            <div class="card-content">
+                <p class="truncate" style="font-weight: bold"><span class="left">分类{{index}}</span><span
+                        class="right">2020-08-02</span></p>
+                <p title="我是用于搜索的标签，在上传时填写，并进行分词搜索。" class="truncate-3">我是用于搜索我是用于搜索的标签我是用于搜索的标签我是用于搜索的标签的标签，在上传时填写，并进行分词搜索。我是用于搜索的标签，在上传时填写，并进行分词搜索</p>
+            </div>
+            <div class="card-action">
+                <div class="chip teal white-text">java</div>
+                <div class="chip teal white-text">elasticsearch</div>
+                <div class="chip teal white-text">对象存储</div>
+            </div>
+        </div>
+    </div>
+</script>
+</body>
 </html>
