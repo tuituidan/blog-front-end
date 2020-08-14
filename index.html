@@ -12,11 +12,13 @@
 <body>
 <div class="navbar-fixed">
     <nav class="blue-grey darken-3" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
-            <svg class="logo-text">
-                <text x="0" y="70%">推推蛋</text>
-            </svg>
-        </a>
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                <img alt="logo" class="logo-img" src="images/logo.png">
+                <svg class="logo-text">
+                    <text x="0" y="70%">推推蛋</text>
+                </svg>
+            </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">首页</a></li>
                 <li><a href="#">标签</a></li>
@@ -79,16 +81,13 @@
         <div class="row card-row">
 
         </div>
-
     </div>
     <br><br>
-
     <div class="section">
-
     </div>
 </div>
 
-<footer class="page-footer orange">
+<footer class="page-footer cyan darken-4">
     <div class="footer-copyright">
         <div class="container">
             Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
@@ -106,13 +105,16 @@
     <div class="col m3">
         <div class="card small hoverable">
             <div class="card-image">
-                <img class="materialboxed" data-caption="图片名称{{index}}" src="images/{{index}}.jpg">
+                <img src="images/{{index}}.jpg">
                 <span class="card-title">图片图片名称图片名称图片名称图片名称图片名称名称{{index}}</span>
             </div>
             <div class="card-content">
-                <p class="truncate" style="font-weight: bold"><span class="left">分类{{index}}</span><span
-                        class="right">2020-08-02</span></p>
-                <p title="我是用于搜索的标签，在上传时填写，并进行分词搜索。" class="truncate-3">我是用于搜索我是用于搜索的标签我是用于搜索的标签我是用于搜索的标签的标签，在上传时填写，并进行分词搜索。我是用于搜索的标签，在上传时填写，并进行分词搜索</p>
+                <p class="truncate">
+                    <span class="left"><i class="material-icons card-icon">turned_in_not</i>分类{{index}}</span>
+                    <span class="right"><i class="material-icons card-icon">schedule</i>2020-08-02</span>
+                </p>
+                <p title="我是用于搜索的标签，在上传时填写，并进行分词搜索。" class="truncate-3">
+                    我是用于搜索我是用于搜索的标签我是用于搜索的标签我是用于搜索的标签的标签，在上传时填写，并进行分词搜索。我是用于搜索的标签，在上传时填写，并进行分词搜索</p>
             </div>
             <div class="card-action truncate">
                 <div class="chip teal white-text">java</div>

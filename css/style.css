@@ -15,15 +15,20 @@
 }
 
 /* region logo */
+.logo-img{
+    height: 50px;
+    vertical-align: middle;
+}
 nav .logo-text{
     width: 160px;
-    height: 64px;
+    height: 50px;
+    vertical-align: middle;
 }
 .logo-text text {
     font-family: Lora;
     letter-spacing: 10px;
     stroke: #ffffff;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     animation: textAnimate 5s infinite alternate;
 }
@@ -280,15 +285,20 @@ nav .logo-text{
 
 /* endregion */
 
-/* region article */
+/* region card */
 .card.small {
     height: 340px;
 }
 .card .card-image .card-title{
-    padding: 10px;
+    padding: 8px;
 }
 .card .card-title{
-    font-size: 20px;
+    font-size: 18px;
+}
+.card .card-icon{
+    float: left;
+    margin-right: 5px;
+    font-size: 22px;
 }
 .card.small .card-image, .card.medium .card-image, .card.large .card-image {
     max-height: 55%;
@@ -297,28 +307,22 @@ nav .logo-text{
     max-height: 45%;
 }
 .card .card-content {
-    padding: 10px 20px;
+    padding: 4px 12px;
 }
 
 .card .card-action {
     padding: 6px;
 }
 .chip{
-    height: 30px;
-    line-height: 30px;
-    margin-bottom: 0;
+    height: 25px;
+    line-height: 25px;
     font-weight: normal;
+    margin: 3px;
 }
 
-/*.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {*/
-/*    color: #009688;*/
-/*}*/
-/*.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {*/
-/*    color: #009688;*/
-/*}*/
-/*.real-content{*/
-/*    line-height: 38px;*/
-/*}*/
+.card .card-content p {
+    margin: 5px 0;
+}
 
 .truncate-3 {
     display: -webkit-box;
