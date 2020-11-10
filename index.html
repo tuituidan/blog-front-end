@@ -14,10 +14,10 @@
     <nav class="blue-grey darken-3" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo">
-                <img alt="logo" class="logo-img" src="images/logo.png">
-                <svg class="logo-text">
-                    <text x="0" y="70%">推推蛋</text>
-                </svg>
+                <img alt="logo" class="circle responsive-img logo-img" src="images/logo.jpg">
+                <span class="logo-text">
+                    推推蛋
+                </span>
             </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">首页</a></li>
@@ -54,24 +54,12 @@
     </ul>
 </div>
 <div class="fullpage-wrapper">
-    <div class="reactor-container">
-        <div class="reactor-container-inner circle abs-center"></div>
-        <div class="tunnel circle abs-center"></div>
-        <div class="core-wrapper circle abs-center"></div>
-        <div class="core-outer circle abs-center">
-            <img class="circle responsive-img" src="images/head-cat.jpg" alt="head"/>
-        </div>
-        <div class="coil-container">
-            <div class="coil coil-1"></div>
-            <div class="coil coil-2"></div>
-            <div class="coil coil-3"></div>
-            <div class="coil coil-4"></div>
-            <div class="coil coil-5"></div>
-            <div class="coil coil-6"></div>
-            <div class="coil coil-7"></div>
-            <div class="coil coil-8"></div>
-        </div>
+    <div class="banner-text-container">
+        <svg class="banner-text">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">学无止境  生无所息</text>
+        </svg>
     </div>
+    <canvas id="canvas-club" width="100%" height="100%"></canvas>
 </div>
 
 
@@ -99,7 +87,119 @@
 <!--  Scripts-->
 <script src="js/jquery.min.js"></script>
 <script src="js/materialize.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/stopExecutionOnTimeout.js"></script>
 <script src="js/template.js"></script>
+<script>
+    var c = document.getElementById("canvas-club");
+    var ctx = c.getContext("2d");
+    var w = c.width = window.innerWidth;
+    var h = c.height = window.innerHeight;
+    var clearColor = 'rgba(0, 0, 0, .1)';
+    var max = 30;
+    var drops = [];
+
+    function random(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function O() {
+    }
+
+    O.prototype = {
+        init: function () {
+            this.x = random(0, w);
+            this.y = 0;
+            this.color = 'hsl(180, 100%, 50%)';
+            this.w = 2;
+            this.h = 1;
+            this.vy = random(4, 5);
+            this.vw = 3;
+            this.vh = 1;
+            this.size = 2;
+            this.hit = random(h * .8, h * .9);
+            this.a = 1;
+            this.va = .96;
+        },
+        draw: function () {
+            if (this.y > this.hit) {
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y - this.h / 2);
+
+                ctx.bezierCurveTo(
+                    this.x + this.w / 2, this.y - this.h / 2,
+                    this.x + this.w / 2, this.y + this.h / 2,
+                    this.x, this.y + this.h / 2);
+
+                ctx.bezierCurveTo(
+                    this.x - this.w / 2, this.y + this.h / 2,
+                    this.x - this.w / 2, this.y - this.h / 2,
+                    this.x, this.y - this.h / 2);
+
+                ctx.strokeStyle = 'hsla(180, 100%, 50%, ' + this.a + ')';
+                ctx.stroke();
+                ctx.closePath();
+
+            } else {
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.size, this.size * 5);
+            }
+            this.update();
+        },
+        update: function () {
+            if (this.y < this.hit) {
+                this.y += this.vy;
+            } else {
+                if (this.a > .03) {
+                    this.w += this.vw;
+                    this.h += this.vh;
+                    if (this.w > 100) {
+                        this.a *= this.va;
+                        this.vw *= .98;
+                        this.vh *= .98;
+                    }
+                } else {
+                    this.init();
+                }
+            }
+
+        }
+    }
+
+    function resize() {
+        w = c.width = window.innerWidth;
+        h = c.height = window.innerHeight;
+    }
+
+    function setup() {
+        for (var i = 0; i < max; i++) {
+            (function (j) {
+                setTimeout(function () {
+                    var o = new O();
+                    o.init();
+                    drops.push(o);
+                }, j * 200)
+            }(i));
+        }
+    }
+
+
+    function anim() {
+        ctx.fillStyle = clearColor;
+        ctx.fillRect(0, 0, w, h);
+        for (var i in drops) {
+            drops[i].draw();
+        }
+        requestAnimationFrame(anim);
+    }
+
+
+    window.addEventListener("resize", resize);
+
+    setup();
+    anim();
+    //@ sourceURL=pen.js
+</script>
 <script src="js/index.js"></script>
 <script type="text/html" id="itemHtml">
     <div class="col m3">
